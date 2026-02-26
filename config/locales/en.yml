@@ -1,0 +1,17 @@
+en:
+  site_settings:
+    getwmx_api_enabled: "Enable /getwmx API endpoint for querying users by email"
+    getwmx_api_log_queries: "Log all /getwmx API queries for audit purposes"
+    getwmx_api_allowed_groups: "Groups allowed to use /getwmx API endpoint"
+    
+  getwmx_api:
+    errors:
+      missing_email: "Email parameter is required"
+      invalid_email: "Invalid email format"
+      user_not_found: "User not found with provided email"
+      access_denied: "Access denied - user profile is private"
+      unauthorized: "Valid API key required"
+      auth_error: "Authentication failed"
+    
+    responses:
+      success: "User data retrieved successfully"

@@ -1,0 +1,21 @@
+plugins:
+  getwmx_api_enabled:
+    default: true
+    client: false
+    
+  getwmx_api_log_queries:
+    default: false
+    client: false
+    
+  getwmx_api_allowed_groups:
+    default: 'trust_level_4,admins'
+    client: false
+    type: list
+    choices:
+      - trust_level_0
+      - trust_level_1
+      - trust_level_2
+      - trust_level_3
+      - trust_level_4
+      - admins
+      - moderators
