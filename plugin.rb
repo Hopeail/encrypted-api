@@ -2,7 +2,7 @@
 # about: Add encrypted API endpoints with RSA asymmetric encryption
 # version: 1.0.0
 # authors: Hopeail
-# url: https://github.com/Hopeail/discourse-encrypted-api
+# url: https://github.com/Hopeail/encrypted-api
 
 enabled_site_setting :encrypted_api_enabled
 
