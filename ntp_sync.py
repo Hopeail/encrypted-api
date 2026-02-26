@@ -28,6 +28,7 @@ class Colors:
     YELLOW = '\033[93m'
     RED = '\033[91m'
     BLUE = '\033[94m'
+    WHITE = '\033[97m'
     RESET = '\033[0m'
     BOLD = '\033[1m'
 
