@@ -1,0 +1,31 @@
+# Discourse plugin gitignore
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build artifacts
+*.o
+*.so
+*.dylib
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Test coverage
+coverage/
+
+# Logs
+*.log
+log/
+
+# Temporary files
+tmp/
+.cache/
+
+# Environment
+.env
+.env.local

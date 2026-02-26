@@ -1,0 +1,18 @@
+en:
+  site_settings:
+    encrypted_api_enabled: "Enable encrypted API endpoints"
+    encrypted_api_public_key: "RSA public key for encryption"
+    encrypted_api_private_key: "RSA private key for decryption (keep secret!)"
+    encrypted_api_key_length: "RSA key length in bits"
+    
+  encrypted_api:
+    admin:
+      generate_keys: "Generate RSA Keys"
+      keys_generated: "RSA keypair generated successfully"
+      public_key: "Public Key"
+      fingerprint: "Key Fingerprint"
+    
+    errors:
+      key_not_configured: "RSA keys not configured. Please generate keys in admin panel."
+      user_not_found: "User not found"
+      encryption_failed: "Encryption failed"

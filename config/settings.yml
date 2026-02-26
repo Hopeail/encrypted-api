@@ -1,0 +1,20 @@
+plugins:
+  encrypted_api_enabled:
+    default: true
+    client: true
+    
+  encrypted_api_public_key:
+    default: ''
+    hidden: true
+    
+  encrypted_api_private_key:
+    default: ''
+    hidden: true
+    
+  encrypted_api_key_length:
+    default: 2048
+    type: list
+    choices:
+      - 1024
+      - 2048
+      - 4096
