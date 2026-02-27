@@ -1,4 +1,5 @@
 plugins:
+  # ========== GetWMX API 设置 ==========
   getwmx_api_enabled:
     default: true
     client: false
@@ -19,3 +20,142 @@ plugins:
       - trust_level_4
       - admins
       - moderators
+
+  # ========== 侧边栏广告设置 - 广告位 1（顶部） ==========
+  adlist_sidebar_enabled:
+    default: true
+    client: true
+    
+  adlist_sidebar_position:
+    default: 'right'
+    client: true
+    type: enum
+    choices:
+      - left
+      - right
+      
+  adlist_sidebar_ad1_enabled:
+    default: true
+    client: false
+    
+  adlist_sidebar_ad1_title:
+    default: 'Featured Product'
+    client: false
+    
+  adlist_sidebar_ad1_content:
+    default: 'Check out our latest collection!'
+    client: false
+    type: long_text
+    
+  adlist_sidebar_ad1_image_url:
+    default: ''
+    client: false
+    
+  adlist_sidebar_ad1_link_url:
+    default: ''
+    client: false
+    
+  adlist_sidebar_ad1_link_text:
+    default: 'Learn More'
+    client: false
+    
+  adlist_sidebar_ad1_bg_color:
+    default: '#f8f9fa'
+    client: false
+    
+  adlist_sidebar_ad1_text_color:
+    default: '#333333'
+    client: false
+
+  # ========== 侧边栏广告设置 - 广告位 2（中部） ==========
+  adlist_sidebar_ad2_enabled:
+    default: false
+    client: false
+    
+  adlist_sidebar_ad2_title:
+    default: 'Special Offer'
+    client: false
+    
+  adlist_sidebar_ad2_content:
+    default: 'Limited time discount on selected items.'
+    client: false
+    type: long_text
+    
+  adlist_sidebar_ad2_image_url:
+    default: ''
+    client: false
+    
+  adlist_sidebar_ad2_link_url:
+    default: ''
+    client: false
+    
+  adlist_sidebar_ad2_link_text:
+    default: 'Shop Now'
+    client: false
+    
+  adlist_sidebar_ad2_bg_color:
+    default: '#fff3cd'
+    client: false
+    
+  adlist_sidebar_ad2_text_color:
+    default: '#856404'
+    client: false
+
+  # ========== 侧边栏广告设置 - 广告位 3（底部） ==========
+  adlist_sidebar_ad3_enabled:
+    default: false
+    client: false
+    
+  adlist_sidebar_ad3_title:
+    default: 'Community Highlight'
+    client: false
+    
+  adlist_sidebar_ad3_content:
+    default: 'Join our growing community of enthusiasts.'
+    client: false
+    type: long_text
+    
+  adlist_sidebar_ad3_image_url:
+    default: ''
+    client: false
+    
+  adlist_sidebar_ad3_link_url:
+    default: ''
+    client: false
+    
+  adlist_sidebar_ad3_link_text:
+    default: 'Join Us'
+    client: false
+    
+  adlist_sidebar_ad3_bg_color:
+    default: '#d4edda'
+    client: false
+    
+  adlist_sidebar_ad3_text_color:
+    default: '#155724'
+    client: false
+
+  # ========== 显示控制设置 ==========
+  adlist_sidebar_show_on_latest:
+    default: true
+    client: false
+    
+  adlist_sidebar_show_on_new:
+    default: true
+    client: false
+    
+  adlist_sidebar_show_on_unread:
+    default: true
+    client: false
+    
+  adlist_sidebar_show_on_top:
+    default: true
+    client: false
+    
+  adlist_sidebar_show_on_category:
+    default: true
+    client: false
+    
+  adlist_sidebar_min_width:
+    default: 768
+    client: false

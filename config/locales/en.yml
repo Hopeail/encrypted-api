@@ -1,9 +1,47 @@
 en:
   site_settings:
+    # GetWMX API 设置
     getwmx_api_enabled: "Enable /getwmx API endpoint for querying users by email"
     getwmx_api_log_queries: "Log all /getwmx API queries for audit purposes"
     getwmx_api_allowed_groups: "Groups allowed to use /getwmx API endpoint"
     
+    # 侧边栏广告设置
+    adlist_sidebar_enabled: "Enable sidebar ad display on topic list pages"
+    adlist_sidebar_position: "Sidebar position (left or right of topic list)"
+    adlist_sidebar_ad1_enabled: "Enable ad slot 1 (top position)"
+    adlist_sidebar_ad1_title: "Ad slot 1 title"
+    adlist_sidebar_ad1_content: "Ad slot 1 content (supports HTML)"
+    adlist_sidebar_ad1_image_url: "Ad slot 1 image URL (optional)"
+    adlist_sidebar_ad1_link_url: "Ad slot 1 destination URL"
+    adlist_sidebar_ad1_link_text: "Ad slot 1 call-to-action button text"
+    adlist_sidebar_ad1_bg_color: "Ad slot 1 background color (hex)"
+    adlist_sidebar_ad1_text_color: "Ad slot 1 text color (hex)"
+    
+    adlist_sidebar_ad2_enabled: "Enable ad slot 2 (middle position)"
+    adlist_sidebar_ad2_title: "Ad slot 2 title"
+    adlist_sidebar_ad2_content: "Ad slot 2 content (supports HTML)"
+    adlist_sidebar_ad2_image_url: "Ad slot 2 image URL (optional)"
+    adlist_sidebar_ad2_link_url: "Ad slot 2 destination URL"
+    adlist_sidebar_ad2_link_text: "Ad slot 2 call-to-action button text"
+    adlist_sidebar_ad2_bg_color: "Ad slot 2 background color (hex)"
+    adlist_sidebar_ad2_text_color: "Ad slot 2 text color (hex)"
+    
+    adlist_sidebar_ad3_enabled: "Enable ad slot 3 (bottom position)"
+    adlist_sidebar_ad3_title: "Ad slot 3 title"
+    adlist_sidebar_ad3_content: "Ad slot 3 content (supports HTML)"
+    adlist_sidebar_ad3_image_url: "Ad slot 3 image URL (optional)"
+    adlist_sidebar_ad3_link_url: "Ad slot 3 destination URL"
+    adlist_sidebar_ad3_link_text: "Ad slot 3 call-to-action button text"
+    adlist_sidebar_ad3_bg_color: "Ad slot 3 background color (hex)"
+    adlist_sidebar_ad3_text_color: "Ad slot 3 text color (hex)"
+    
+    adlist_sidebar_show_on_latest: "Show sidebar on /latest page"
+    adlist_sidebar_show_on_new: "Show sidebar on /new page"
+    adlist_sidebar_show_on_unread: "Show sidebar on /unread page"
+    adlist_sidebar_show_on_top: "Show sidebar on /top page"
+    adlist_sidebar_show_on_category: "Show sidebar on category topic list pages"
+    adlist_sidebar_min_width: "Minimum browser width (px) to display sidebar"
+
   getwmx_api:
     errors:
       missing_email: "Email parameter is required"
@@ -15,3 +53,10 @@ en:
     
     responses:
       success: "User data retrieved successfully"
+
+  adlist_sidebar:
+    placeholder:
+      title: "Advertisement"
+      link: "Click here"
+    aria:
+      label: "Sidebar advertisements"

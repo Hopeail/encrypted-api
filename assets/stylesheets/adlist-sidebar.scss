@@ -1,0 +1,220 @@
+/**
+ * Discourse Adlist Sidebar Plugin Styles
+ * Responsive sidebar advertisement styling
+ */
+
+// ========== 侧边栏包装器 ==========
+.adlist-sidebar-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 100%;
+  
+  &.adlist-has-right-sidebar {
+    flex-direction: row;
+    
+    .topic-list-container {
+      flex: 1;
+      min-width: 0; // 允许 flex 子项缩小
+    }
+  }
+  
+  &.adlist-has-left-sidebar {
+    flex-direction: row-reverse;
+    
+    .topic-list-container {
+      flex: 1;
+      min-width: 0;
+    }
+  }
+}
+
+// ========== 侧边栏容器 ==========
+.adlist-sidebar-container {
+  width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  // 响应式：在小屏幕上隐藏
+  @media (max-width: 767px) {
+    display: none !important;
+  }
+  
+  // 左侧位置
+  &.adlist-sidebar-left {
+    order: -1;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  // 右侧位置
+  &.adlist-sidebar-right {
+    order: 1;
+    margin-left: 20px;
+  }
+}
+
+// ========== 广告单元 ==========
+.adlist-ad {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  // 默认样式（可通过后台设置覆盖）
+  background-color: #f8f9fa;
+  color: #333333;
+}
+
+// ========== 广告标题 ==========
+.adlist-ad-title {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: inherit;
+}
+
+// ========== 广告图片 ==========
+.adlist-ad-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+// ========== 广告内容 ==========
+.adlist-ad-content {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: inherit;
+  
+  p {
+    margin: 0 0 10px 0;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: underline;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// ========== 广告链接按钮 ==========
+.adlist-ad-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: inherit;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+  
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+  }
+}
+
+// ========== 广告位特定样式 ==========
+.adlist-ad-top {
+  // 顶部广告位特殊样式（可选）
+}
+
+.adlist-ad-middle {
+  // 中部广告位特殊样式（可选）
+}
+
+.adlist-ad-bottom {
+  // 底部广告位特殊样式（可选）
+}
+
+// ========== 深色模式支持 ==========
+body.dark-mode,
+body.dark-theme {
+  .adlist-ad {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    
+    &:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+  }
+  
+  .adlist-ad-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+// ========== 动画效果 ==========
+@keyframes adlistFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.adlist-sidebar-container {
+  animation: adlistFadeIn 0.3s ease-out;
+}
+
+// ========== 加载状态 ==========
+.adlist-sidebar-loading {
+  width: 280px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  
+  .adlist-ad-placeholder {
+    height: 100px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    animation: adlistPulse 1.5s infinite;
+  }
+}
+
+@keyframes adlistPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+// ========== 打印样式 ==========
+@media print {
+  .adlist-sidebar-container,
+  .adlist-ad {
+    display: none !important;
+  }
+}
